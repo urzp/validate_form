@@ -17,25 +17,25 @@
         </p>
         <p>
             <label for="comfirm_email">Confirm email:</label><br>
-            <input id="comfirm_email" type="email" name="email">
+            <input id="comfirm_email" type="email" name="comfirm_email">
         </p>
         <p>
             <label for="contry">Country:</label><br>
-            <input id="contry" type="text" name="email">
+            <input id="contry" type="text" name="contry">
         </p>
         <p>
-            <label for="Zip_Code">Zip Code:</label><br>
-            <input type="text" id="Zip_Code">
+            <label for="zip_code">Zip Code:</label><br>
+            <input type="text" id="zip_code" name="zip_code">
         </p>
         <p>
             <label for="password">Password:</label>
             <br>
-            <input type="password" id="password">
+            <input type="password" id="password" name="password">
         </p>
         <p>
-            <label for="Confirm_password:">Confirm password:</label>
+            <label for="confirm_password">Confirm password:</label>
             <br>
-            <input type="password" id="Confirm_password">
+            <input type="password" id="confirm_password" name="confirm_password">
         </p>
         <p>
             <input type="checkbox" id="agree">
@@ -50,7 +50,24 @@
             rules: {
                email: {
                    required: true
-               }
+               },
+               comfirm_email: {
+                    equalTo: "#email"
+                },
+               contry: {
+                   required: true
+               },
+               zip_code: {
+                   required: true,
+                   number: true
+               },
+                password: {
+                   required: true
+               },
+               confirm_password: {
+                    equalTo: "#password"
+                } 
+                
             }
         });
     </script>
