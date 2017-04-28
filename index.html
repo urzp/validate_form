@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>VALIDATE FORM</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <form  class="form" id="commentForm" method="get" action="">
+        <h1>Create a new account</h1>
+        <p>
+            <label for="email">Enter email:</label><br>
+            <input id="email" type="email" name="email" required>
+        </p>
+        <p>
+            <label for="comfirm_email">Confirm email:</label><br>
+            <input id="comfirm_email" type="email" name="email" required>
+        </p>
+        <p>
+            <label for="contry">Country:</label><br>
+            <input id="contry" type="text" name="email" required>
+        </p>
+        <p>
+            <label for="Zip_Code">Zip Code:</label><br>
+            <input type="text" id="Zip_Code">
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="password">
+        </p>
+        <p>
+            <label for="Confirm_password:">Confirm password:</label>
+            <br>
+            <input type="password" id="Confirm_password">
+        </p>
+        <p>
+            <input type="checkbox" id="agree">
+            <label for="agree">Yes, I agree.</label>
+        </p>
+        <p>
+            <input type="submit" class="submit" value="submit">
+        </p>
+    </form>
     
 </body>
 </html>

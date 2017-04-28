@@ -1,0 +1,10 @@
+form{
+    display: block;
+    margin: 10px auto;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    width: 80%;
+    height: 500px;
+    background: #eee;
+}
+
