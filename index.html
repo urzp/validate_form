@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <title>VALIDATE FORM</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 </head>
 <body>
     <form  class="form" id="commentForm" method="get" action="">
         <h1>Create a new account</h1>
         <p>
             <label for="email">Enter email:</label><br>
-            <input id="email" type="email" name="email" required>
+            <input id="email" type="email" name="email">
         </p>
         <p>
             <label for="comfirm_email">Confirm email:</label><br>
-            <input id="comfirm_email" type="email" name="email" required>
+            <input id="comfirm_email" type="email" name="email">
         </p>
         <p>
             <label for="contry">Country:</label><br>
-            <input id="contry" type="text" name="email" required>
+            <input id="contry" type="text" name="email">
         </p>
         <p>
             <label for="Zip_Code">Zip Code:</label><br>
@@ -42,6 +45,15 @@
             <input type="submit" class="submit" value="submit">
         </p>
     </form>
+    <script>
+        $("#commentForm").validate({
+            rules: {
+               email: {
+                   required: true
+               }
+            }
+        });
+    </script>
     
 </body>
 </html>
